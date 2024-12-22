@@ -1,7 +1,7 @@
-@use 'var';
-@use 'mixin';
-@use 'colors';
-@use 'fonts';
+@use "var";
+@use "mixin";
+@use "colors";
+@use "fonts";
 
 h1 {
     @include mixin.h1;
@@ -48,7 +48,7 @@ body main {
     align-items: center;
     background-color: colors.$primary;
     border-radius: 20px;
-    background-image: url('../img/bg-snow.png');
+    background-image: url("../img/bg-snow.png");
     color: colors.$static-white;
     
 }
@@ -61,7 +61,7 @@ body main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url('../img/bg-ball.png');
+    background-image: url("../img/bg-ball.png");
     background-color: transparent;
     background-size: 1440px;
     background-repeat: no-repeat;
@@ -118,7 +118,7 @@ body main {
 .about-img-container {
     border-radius: 20px;
     height: 528px;
-    background-image: url('../img/santa.png');
+    background-image: url("../img/santa.png");
     background-color: transparent;
     flex-grow: 1;
     min-width: 376px;
@@ -324,7 +324,7 @@ body main {
 }
 ////
 .timer-section {
-    background-image: url('../img/bg-forest.png');
+    background-image: url("../img/bg-forest.png");
     background-color: transparent;
     background-size: 1440px;
     background-repeat: no-repeat;

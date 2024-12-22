@@ -1,6 +1,6 @@
-const leftButton = document.getElementById('slider_left-button');
-const rightButton = document.getElementById('slider_right-button');
-const slider = document.getElementById('main-slider');
+const leftButton = document.getElementById("slider_left-button");
+const rightButton = document.getElementById("slider_right-button");
+const slider = document.getElementById("main-slider");
 
 let sliderScrollWidth = (slider.scrollWidth - slider.clientWidth);
 let clickTimes = 2;
@@ -20,12 +20,12 @@ const scrollRight = () => {
 };
 
 const disableButton = (button) => {
-  button.classList.add('slider-button-disabled');
+  button.classList.add("slider-button-disabled");
   button.setAttribute("disabled", "true");
 };
 
 const activeButton = (button) => {
-  button.classList.remove('slider-button-disabled');
+  button.classList.remove("slider-button-disabled");
   button.removeAttribute("disabled");
 
 };
@@ -49,5 +49,5 @@ const disableScrollButton = () => {
 
 leftButton.onclick = scrollLeft;
 rightButton.onclick = scrollRight;
-window.addEventListener('resize', checkUserWidth)
-slider.addEventListener('scroll', disableScrollButton);
+window.addEventListener("resize", checkUserWidth)
+slider.addEventListener("scroll", disableScrollButton);

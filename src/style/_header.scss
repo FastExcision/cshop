@@ -1,6 +1,6 @@
-@use 'var';
-@use 'mixin';
-@use 'colors';
+@use "var";
+@use "mixin";
+@use "colors";
 
 
 .disable-scroll {
@@ -9,8 +9,8 @@
 
 header {
   @include mixin.action-small;
-   height: 64px;
-   background-color: colors.$static-white;
+  height: 64px;
+  background-color: colors.$static-white;
 }
 
 .menu-header {
@@ -26,14 +26,17 @@ header {
 .nav-logo {
 
   background-color: colors.$static-white;
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 12px;
   width: 141px;
   height: 40px;
   text-decoration: none;
   color: colors.$dark;
+
   &:visited {
-    color:black
+    color: black
   }
 }
 
@@ -44,6 +47,7 @@ header {
 .nav {
   overflow: hidden;
 }
+
 .nav-menu {
   width: 100%;
   display: flex;
@@ -65,11 +69,25 @@ header {
   background-color: colors.$static-white;
   border-radius: 10%;
   border: 0;
+
   &:hover {
     background-color: colors.$primary-10;
   }
+
   display: none;
 }
+
+.img-button {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.opacity-disable {
+  opacity: 0;
+}
+
+
+
 
 .nav-menu-content {
   display: flex;
@@ -80,15 +98,18 @@ header {
 
 .nav-menu-ref {
   text-decoration: none;
+  color: colors.$dark;
+
+  &:visited {
     color: colors.$dark;
-    &:visited {
-      color:colors.$dark;
   }
 }
 
 .menu-elements {
   margin-left: 5px;
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 12px;
   height: 40px;
 }
@@ -122,19 +143,20 @@ header {
 }
 
 .transform-menu-modal {
-  transform: translateY(-1500px);
+  transform: translateY(1500px);
 }
 
 .display-none {
   display: none;
 }
 
-
 .menu-elements-modal {
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 12px;
   height: 40px;
-  
+
 }
 
 .nav-menu-ref-modal {
@@ -143,8 +165,8 @@ header {
   margin: 10px 0px;
 
 
-    &:visited {
-      color:colors.$dark;
+  &:visited {
+    color: colors.$dark;
   }
 }
 
@@ -160,7 +182,7 @@ header {
   .nav-menu {
     display: none;
   }
-  
+
 }
 
 @media (max-width: var.$mobile-width) {
