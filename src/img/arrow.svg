@@ -5,11 +5,12 @@
 viewBox="0 0 3.17 6.07"
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <!-- .str0 {stroke:black;stroke-width:0.14;stroke-miterlimit:22.9256} -->
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str0 {stroke:black;stroke-width:0.14;stroke-miterlimit:22.9256}
-    .fil0 {fill:none;fill-rule:nonzero}
+    
+    .fil0 {fill:red;fill-rule:nonzero}
    ]]>
   </style>
  </defs>
