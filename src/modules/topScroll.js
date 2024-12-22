@@ -3,10 +3,10 @@ const button = document.querySelector(".top-scroll-button");
 
 const showButton = () => {
     if (window.scrollY === 0) {
-        button.classList.add("display-none")
+        button.classList.add("top-scroll-button-inactive");
         return;
     }
-    button.classList.remove("display-none");
+    button.classList.remove("top-scroll-button-inactive");
     return;
 }
 
