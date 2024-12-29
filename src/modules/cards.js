@@ -9,24 +9,19 @@ const giftCont = document.getElementById("best-gifts-container");
 const loadDescription = (element, divCont) => {
     const DescCont = document.createElement("div");
     DescCont.classList.add("cards-description-container");
-
-    if (element.category == "For Work") {DescCont.innerHTML = `<h4 class="categories-for-work">${element.category}</h4>`} 
-    else if (element.category == "For Health"){DescCont.innerHTML = `<h4 class="categories-for-health">${element.category}</h4>`}
-    else {DescCont.innerHTML = `<h4 class="categories-for-harmony">${element.category}</h4>`}
-
+    if (element.category == "For Work") { DescCont.innerHTML = `<h4 class="categories-for-work">${element.category}</h4>` }
+    else if (element.category == "For Health") { DescCont.innerHTML = `<h4 class="categories-for-health">${element.category}</h4>` }
+    else { DescCont.innerHTML = `<h4 class="categories-for-harmony">${element.category}</h4>` }
     DescCont.innerHTML += `<h3>${element.name}</h3>`;
     divCont.appendChild(DescCont);
 }
 
 const loadImg = (element, divCont) => {
     const imgCont = document.createElement("img");
-
     imgCont.classList.add("cards-image");
-
-    if (element.category == "For Work") {imgCont.src = forWorkImg} 
-    else if (element.category == "For Health"){imgCont.src = forHealthImg}
-    else {imgCont.src = forHarmImg}
-
+    if (element.category == "For Work") { imgCont.src = forWorkImg }
+    else if (element.category == "For Health") { imgCont.src = forHealthImg }
+    else { imgCont.src = forHarmImg }
     divCont.appendChild(imgCont);
 }
 
@@ -39,11 +34,17 @@ const loadCards = (element) => {
 };
 
 const start = (qty) => {
-for (let n = 0; n < qty; n++) {
-    const randomNum = Math.floor(Math.random() * cards.length)
-    loadCards(cards[randomNum]);
-}   
-};
+    const randomNum = [];
+    while (randomNum.length < 4) {
+        let gen = Math.floor(Math.random() * cards.length);
+        if (!randomNum.includes(gen)) {
+            randomNum.push(gen);
+        }
+    }
+    for (let n = 0; n < qty; n++) {
+        loadCards(cards[randomNum[n]]);
+    }
+}
 start(4);
 
 
