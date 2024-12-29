@@ -5,58 +5,47 @@ import forHarmImg from "../img/gift-for-harmony.png";
 
 const giftCont = document.getElementById("best-gifts-container");
 
-
-const loadDescription = (element, divCont) => {
+const loadDescription = (element, cardContainer) => {
     const DescCont = document.createElement("div");
-    DescCont.classList.add("cards-description-container");
-    if (element.category == "For Work") { DescCont.innerHTML = `<h4 class="categories-for-work">${element.category}</h4>` }
-    else if (element.category == "For Health") { DescCont.innerHTML = `<h4 class="categories-for-health">${element.category}</h4>` }
-    else { DescCont.innerHTML = `<h4 class="categories-for-harmony">${element.category}</h4>` }
+    DescCont.classList.add("cards-container_description-container");
+    DescCont.innerHTML = (element.category === "For Work") ? `<h4 class="categories-for-work">${element.category}</h4>`:
+                         (element.category == "For Health") ? `<h4 class="categories-for-health">${element.category}</h4>`:
+                        `<h4 class="categories-for-harmony">${element.category}</h4>`;
     DescCont.innerHTML += `<h3>${element.name}</h3>`;
-    divCont.appendChild(DescCont);
+    cardContainer.appendChild(DescCont);
 }
 
-const loadImg = (element, divCont) => {
+const loadImg = (element, cardContainer) => {
     const imgCont = document.createElement("img");
     imgCont.classList.add("cards-image");
-    if (element.category == "For Work") { imgCont.src = forWorkImg }
-    else if (element.category == "For Health") { imgCont.src = forHealthImg }
-    else { imgCont.src = forHarmImg }
-    divCont.appendChild(imgCont);
+    imgCont.src = (element.category === "For Work") ? forWorkImg:
+                  (element.category === "For Health") ? forHealthImg:
+                  forHarmImg;
+    cardContainer.appendChild(imgCont);
 }
 
 const loadCards = (element) => {
-    const divCont = document.createElement("div");
-    divCont.classList.add("cards-container");
-    giftCont.appendChild(divCont);
-    loadImg(element, divCont);
-    loadDescription(element, divCont);
-};
+    const cardContainer = document.createElement("div");
+    cardContainer.classList.add("cards-container");
+    giftCont.appendChild(cardContainer);
+    loadImg(element, cardContainer);
+    loadDescription(element, cardContainer);
+    // cardContainer.addEventListener("click","" )
+}
 
 const start = (qty) => {
-    const randomNum = [];
-    while (randomNum.length < 4) {
+    const randomNumber = [];
+    while (randomNumber.length < qty) {
         let gen = Math.floor(Math.random() * cards.length);
-        if (!randomNum.includes(gen)) {
-            randomNum.push(gen);
+        if (!randomNumber.includes(gen)) {
+            randomNumber.push(gen);
         }
     }
     for (let n = 0; n < qty; n++) {
-        loadCards(cards[randomNum[n]]);
+        loadCards(cards[randomNumber[n]]);
     }
 }
+
 start(4);
 
 
-
-// const test = {
-//     name: "Bug Magnet",
-//     description: "Able to find bugs in code like they were placed there on purpose.",
-//     category: "For Work",
-//     superpowers: {
-//       live: "+500",
-//       create: "+500",
-//       love: "+200",
-//       dream: "+400"
-//     }
-// }
