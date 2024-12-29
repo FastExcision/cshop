@@ -309,20 +309,20 @@ body main {
     padding: 20px;
     height: 112px;
 
-    .cards-description-categories {
-        margin-bottom: 8px;
-    }
-
     .categories-for-work {
         color: colors.$tag-purple;
+        margin-bottom: 8px;
     }
     
     .categories-for-health {
         color: colors.$tag-green;
+        margin-bottom: 8px;
     }
     .categories-for-harmony {
         color: colors.$tag-pink;
+        margin-bottom: 8px;
     }
+    
 }
 ////
 .timer-section {
