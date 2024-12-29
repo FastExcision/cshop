@@ -14,7 +14,7 @@ const loadDescription = (element, divCont) => {
     else if (element.category == "For Health"){DescCont.innerHTML = `<h4 class="categories-for-health">${element.category}</h4>`}
     else {DescCont.innerHTML = `<h4 class="categories-for-harmony">${element.category}</h4>`}
 
-    DescCont.innerHTML += `<h3 class="cards-description-header">${element.name}</h3>`;
+    DescCont.innerHTML += `<h3>${element.name}</h3>`;
     divCont.appendChild(DescCont);
 }
 
@@ -40,10 +40,11 @@ const loadCards = (element) => {
 
 const start = (qty) => {
 for (let n = 0; n < qty; n++) {
-    loadCards(cards[n]);
+    const randomNum = Math.floor(Math.random() * cards.length)
+    loadCards(cards[randomNum]);
 }   
 };
-start(2);
+start(4);
 
 
 
