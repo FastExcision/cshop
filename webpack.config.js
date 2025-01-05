@@ -8,14 +8,14 @@ const target = devMode ? 'web' : 'browserslist';
 const devtool = devMode ? 'source-map' : undefined;
 
 module.exports = {
-  mode,
-  target,
-  devtool,
-  devServer: {
-    port: 8080,
-    open: true,
-    hot: true,
-  },
+    mode,
+    target,
+    devtool,
+    devServer: {
+      port: 8080,
+      open: true,
+      hot: true,
+    },
   entry: path.resolve(__dirname, 'src', 'index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),

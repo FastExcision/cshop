@@ -76,11 +76,11 @@ body main {
 }
 
 .main-button {
-    width: 235;
-    height: 56;
+    width: 235px;
+    height: 56px;
     background-color: colors.$dark;
     border-radius: 20px;
-    padding: 20px 32px;
+    padding: 20px 20px;
     margin: 10px;
     color: colors.$static-white;
     border: 0;
@@ -125,8 +125,8 @@ body main {
     max-width: 638px;
     background-repeat: no-repeat;
     background-position: center;
-    margin-left: 0%;
-    margin-right: 0%;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .about-text-container {
@@ -311,7 +311,7 @@ body main {
     border-radius: 20px;
     padding: 20px;
     height: 112px;
-
+}
     .categories-for-work {
         color: colors.$tag-purple;
         margin-bottom: 8px;
@@ -326,7 +326,7 @@ body main {
         margin-bottom: 8px;
     }
     
-}
+
 //
 .popover {
     position: absolute;
@@ -336,17 +336,36 @@ body main {
     overflow: hidden;
 }
 .cards-container-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: colors.$content-background;
-    width:  310px;
+    max-width:  400px;
+    min-width:  310px;
     color: colors.$dark;
     border-radius: 20px;
     margin: 12px;
-    &:hover {
-        h3 {
-            color: colors.$primary;
-        }
-    }
 }
+
+.cards-container-modal_description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: colors.$static-white;
+    border-radius: 20px;
+    padding: 20px;
+
+}
+
+.SUPERPOWERS-container-modal {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 2fr 1fr 4fr;
+
+}
+
+
 
 ////
 .timer-section {
@@ -369,12 +388,12 @@ body main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 60px 0px;
+    padding: 60px 0;
     text-align: center;
 }
 
 .timer-section_container .main-button{
-    margin: 20px 0px;
+    margin: 20px 0;
 }
 
 .timer-container {

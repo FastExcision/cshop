@@ -14,7 +14,7 @@ header {
 }
 
 .menu-header {
-  padding: 12px 0px;
+  padding: 12px 0;
   height: 64px;
   max-width: 90%;
   display: flex;
@@ -151,18 +151,19 @@ header {
 }
 
 .menu-elements-modal {
+
+
+}
+
+.nav-menu-ref-modal {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 12px;
   height: 40px;
-
-}
-
-.nav-menu-ref-modal {
   text-decoration: none;
   color: colors.$dark;
-  margin: 10px 0px;
+  margin: 10px 0;
 
 
   &:visited {

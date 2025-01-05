@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const newYear = new Date("2024-12-31T23:59:59");
+    const newYear = new Date("2025-12-31T23:59:59");
 
     const elementDays = document.getElementById("timer-days");
     const elementHours = document.getElementById("timer-hours");
