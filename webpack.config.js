@@ -16,7 +16,9 @@ module.exports = {
       open: true,
       hot: true,
     },
-  entry: path.resolve(__dirname, 'src', 'index.js'),
+  entry: { main: path.resolve(__dirname, 'src', 'index.js'),
+            gifts: path.resolve(__dirname, 'src', 'gifts.js'),
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
@@ -26,6 +28,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'index.html'),
+      chunks: ['main']
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'gifts.html'),
+      filename: 'gifts.html',
+      chunks: ['gifts']
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
