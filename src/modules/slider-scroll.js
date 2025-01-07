@@ -3,12 +3,12 @@ const rightButton = document.getElementById("slider_right-button");
 const slider = document.getElementById("main-slider");
 
 let sliderScrollWidth = (slider.scrollWidth - slider.clientWidth);
-let clickTimes = 3;
+let clickTimes = 2;
 
 const checkUserWidth = () => {
   if (window.innerWidth < 769) {
     sliderScrollWidth = (slider.scrollWidth - slider.clientWidth)
-    clickTimes = 6;
+    clickTimes = 5;
   }
 }
 const scrollLeft = () => {
@@ -31,7 +31,7 @@ const activeButton = (button) => {
 };
 
 const disableScrollButton = () => {
-  if (slider.scrollLeft >= sliderScrollWidth) {
+  if (slider.scrollLeft > sliderScrollWidth) {
     disableButton(rightButton);
     return;
   } 
