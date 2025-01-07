@@ -103,6 +103,8 @@ const loadCards = (element) => {
     cardContainer.appendChild(loadImg(element));
     cardContainer.appendChild(loadDescription(element));
     cardContainer.addEventListener("click",() => createCardModal(element));
+    cardContainer.addEventListener("mouseenter",() => cardContainer.classList.add("cards-scale-animation"));
+    cardContainer.addEventListener("mouseleave",() => cardContainer.classList.remove("cards-scale-animation"));
 }
 
 const start = (qty) => {

@@ -108,6 +108,8 @@ const loadCards = (element) => {
     cardContainer.appendChild(loadImg(element));
     cardContainer.appendChild(loadDescription(element));
     cardContainer.addEventListener("click",() => createCardModal(element));
+    cardContainer.addEventListener("mouseenter",() => cardContainer.classList.add("cards-scale-animation"));
+    cardContainer.addEventListener("mouseleave",() => cardContainer.classList.remove("cards-scale-animation"));
 }
 
 const start = (qty,buttonSelect) => {
@@ -175,8 +177,8 @@ const animation = () => {
 start(12, "All");
 
 popover.addEventListener("click", toggleDisplay);
-
 buttonAll.addEventListener("click", () => start(12,"All"));
 buttonForWork.addEventListener("click", () => start(12,"For Work"));
 buttonForHealth.addEventListener("click",() => start(12,"For Health"));
 buttonForHarmony.addEventListener("click", () => start(12,"For Harmony"));
+
