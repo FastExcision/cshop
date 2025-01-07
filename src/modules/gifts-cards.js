@@ -133,6 +133,8 @@ const start = (qty,buttonSelect) => {
     for (let n = 0; n < randomNumber.length; n++) {
         loadCards(filteredCards[randomNumber[n]]);
     }
+    animation()
+    setTimeout(() => animation(), 300);
 }
 
 const toggleDisplay = () => {
@@ -164,6 +166,10 @@ const activeButton = (buttonSelect) => {
         buttonForHarmony.classList.remove("gifts-button-active");
         buttonForHealth.classList.add("gifts-button-active");
     }
+}
+
+const animation = () => {
+    giftCont.classList.toggle("opacity-animation");
 }
 
 start(12, "All");
