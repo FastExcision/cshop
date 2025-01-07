@@ -1,7 +1,7 @@
-@use "var";
-@use "mixin";
-@use "colors";
-@use "fonts";
+@use "../var";
+@use "../mixin";
+@use "../colors";
+@use "../fonts";
 
 h1 {
   @include mixin.h1;
@@ -47,7 +47,7 @@ body main {
   justify-content: center;
   align-items: center;
   background-color: colors.$primary;
-  background-image: url("../img/bg-garland.png");
+  background-image: url("../../img/bg-garland.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: top;

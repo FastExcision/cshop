@@ -1,0 +1,73 @@
+@use "../colors";
+
+.timer-section {
+  background-image: url("../../img/bg-forest.png");
+  background-color: transparent;
+  background-size: 1440px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 60px;
+  height: 668px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.timer-section_container {
+  max-width: 426px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.timer-section_container .main-button{
+  margin: 20px 0;
+}
+
+.timer-container {
+  width: 344px;
+  height: 72px;
+  padding: 12px 8px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: colors.$static-white-40;
+  margin-top: 8px;
+}
+
+.timer-box {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.timer-separator {
+  height: 20px;
+  border: 1px solid colors.$static-white-40;
+}
+
+.top-scroll-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  opacity: 1;
+  width: 50px;
+  height: 50px;
+  visibility: visible;
+  transition: visibility 0s, opacity 0.5s linear;
+  background-color: colors.$static-white;
+  border: 1px solid colors.$primary;
+  border-radius: 15px;
+}
+
+.top-scroll-button-inactive {
+  opacity: 0;
+  visibility: hidden;
+}

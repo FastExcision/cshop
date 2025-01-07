@@ -1,0 +1,53 @@
+@use "../colors";
+
+.about {
+  width: 100%;
+  min-height: 648px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-grow: 1;
+  color: colors.$dark;
+  max-width: 1276px;
+  border-radius: 20px;
+  background-color: colors.$static-white;
+}
+///сделать норм картинку
+.about-img-container {
+  border-radius: 20px;
+  height: 528px;
+  background-image: url("../../img/santa.png");
+  background-color: transparent;
+  flex-grow: 1;
+  min-width: 376px;
+  max-width: 638px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.about-text-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 426px;
+  height: 328px;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+.about-text {
+  color: colors.$primary;
+}

@@ -1,4 +1,9 @@
 @use "style/reset";
 @use "style/header";
-@use "style/style";
+@use "style/index/main";
+@use "style/index/hero";
+@use "style/index/about";
+@use "style/index/slider";
+@use "style/index/best-gifts";
+@use "style/index/timer";
 @use "style/footer";
