@@ -2,6 +2,38 @@
 @use "mixin";
 @use "colors";
 
+h1 {
+  @include mixin.h1;
+}
+
+h2 {
+  @include mixin.h2;
+}
+
+h3 {
+  @include mixin.h3;
+}
+
+h4 {
+  @include mixin.h4;
+}
+
+p {
+  @include mixin.p;
+}
+
+.caption {
+  @include mixin.caption;
+}
+
+.action-small {
+  @include mixin.action-small;
+}
+
+.action-large {
+  @include mixin.action-large;
+}
+
 
 .disable-scroll {
   overflow: hidden
@@ -56,11 +88,6 @@ header {
   flex-shrink: 0;
 }
 
-.nav-menu li {
-
-  background-color: colors.$static-white;
-}
-
 .nav-menu li:hover {
   background-color: colors.$primary-10;
 }
@@ -112,6 +139,7 @@ header {
   justify-content: center;
   border-radius: 12px;
   height: 40px;
+
 }
 
 .menu-gifts {
@@ -142,11 +170,16 @@ header {
   transition: transform 1s;
 }
 
-
-.nav-menu-modal li:hover {
+.nav-menu-gifts-modal {
   background-color: colors.$primary-10;
+
+}
+.menu-elements-modal {
   border-radius: 20px;
   padding: 0 20px;
+  &:hover {
+    background-color: colors.$primary-10;
+  }
 }
 
 .transform-menu-modal {
